@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-04T21:14:48+08:00</updated>
+  <updated>2016-01-04T21:21:27+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -29,9 +29,7 @@
     <id>http://guoxiaomind.github.io/blog/2016/01/04/wo-de-bo-ke</id>
     <content type="html"><![CDATA[<hr />
 
-<p>layout: post
-title: &ldquo;我的博客&rdquo;
-date: 2016-01-04 20:47:38 +0800</p>
+<p>我的博客</p>
 
 <h1>comments: true</h1>
 
