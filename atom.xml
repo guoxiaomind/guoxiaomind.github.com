@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-04T21:04:19+08:00</updated>
+  <updated>2016-01-04T21:14:48+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -23,11 +23,52 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[我的博客]]></title>
+    <title type="html"><![CDATA[Wo De Bo Ke]]></title>
     <link href="http://guoxiaomind.github.io/blog/2016/01/04/wo-de-bo-ke/"/>
-    <updated>2016-01-04T20:47:38+08:00</updated>
+    <updated>2016-01-04T00:00:00+08:00</updated>
     <id>http://guoxiaomind.github.io/blog/2016/01/04/wo-de-bo-ke</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<hr />
+
+<p>layout: post
+title: &ldquo;我的博客&rdquo;
+date: 2016-01-04 20:47:38 +0800</p>
+
+<h1>comments: true</h1>
+
+<p>Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.</p>
+
+<p>The quick brown fox jumped over the lazy
+dog&rsquo;s back.</p>
+
+<h1>Header 3</h1>
+
+<blockquote><p>This is a blockquote.</p>
+
+<p>This is the second paragraph in the blockquote.</p>
+
+<h2>This is an H2 in a blockquote</h2>
+
+<p>Some of these words <em>are emphasized</em>.
+Some of these words <em>are emphasized also</em>.
+Use two asterisks for <strong>strong emphasis</strong>.
+Or, if you prefer, <strong>use two underscores instead</strong>.</p></blockquote>
+
+<ul>
+<li>Candy.</li>
+<li>Gum.</li>
+<li><p>Booze.</p></li>
+<li><p>A list item.
+With multiple paragraphs.</p></li>
+<li><p>Another item in the list.</p></li>
+</ul>
+
+
+<p>This is an <a href="http://example.com/">example link</a>.</p>
+
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
+<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
 ]]></content>
   </entry>
   
