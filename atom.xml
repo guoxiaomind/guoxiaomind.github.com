@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-05T23:12:30+08:00</updated>
+  <updated>2016-01-05T23:38:16+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -14,20 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[哈哈，宝宝你好，爱你么么哒]]></title>
-    <link href="http://guoxiaomind.github.io/blog/2016/01/05/ha-ha-,bao-bao-ni-hao-,ai-ni-yao-yao-da/"/>
-    <updated>2016-01-05T23:06:52+08:00</updated>
-    <id>http://guoxiaomind.github.io/blog/2016/01/05/ha-ha-,bao-bao-ni-hao-,ai-ni-yao-yao-da</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[我的博客]]></title>
     <link href="http://guoxiaomind.github.io/blog/2016/01/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <updated>2016-01-04T00:00:00+08:00</updated>
     <id>http://guoxiaomind.github.io/blog/2016/01/04/我的博客</id>
-    <content type="html"><![CDATA[<h1>comments: true</h1>
+    <content type="html"><![CDATA[<h1>我的博客</h1>
+
+<h1>comments: true</h1>
 
 <p>Now is the time for all good men to come to
 the aid of their country. This is just a
