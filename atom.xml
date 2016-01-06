@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-06T23:03:31+08:00</updated>
+  <updated>2016-01-06T23:24:04+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -18,17 +18,7 @@
     <link href="http://guoxiaomind.github.io/blog/2016/01/06/uitableview/"/>
     <updated>2016-01-06T22:01:34+08:00</updated>
     <id>http://guoxiaomind.github.io/blog/2016/01/06/uitableview</id>
-    <content type="html"><![CDATA[<p>UItableVIew是IOS开发中最常用的控件之一，我们平时所用的APP中都需要用到它，所以我们必须详细了解它的属性和方法，以便在实际开发中能够更加方便的应用它。</p>
-
-<p>首先我们看一下QQ和设置界面，这都是用UITableview实现的。</p>
-
-<p><img src="http://guoxiaomind.github.io/images/postimage/qq.png" width="180" height="260"/>
-<img src="http://guoxiaomind.github.io/images/postimage/setting.png" width="180" height="260" /></p>
-
-<ol>
-<li>UITableView介绍</li>
-</ol>
-
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
