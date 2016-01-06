@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-06T22:01:41+08:00</updated>
+  <updated>2016-01-06T23:03:31+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -18,51 +18,17 @@
     <link href="http://guoxiaomind.github.io/blog/2016/01/06/uitableview/"/>
     <updated>2016-01-06T22:01:34+08:00</updated>
     <id>http://guoxiaomind.github.io/blog/2016/01/06/uitableview</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[我的博客]]></title>
-    <link href="http://guoxiaomind.github.io/blog/2016/01/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <updated>2016-01-04T00:00:00+08:00</updated>
-    <id>http://guoxiaomind.github.io/blog/2016/01/04/我的博客</id>
-    <content type="html"><![CDATA[<hr />
+    <content type="html"><![CDATA[<p>UItableVIew是IOS开发中最常用的控件之一，我们平时所用的APP中都需要用到它，所以我们必须详细了解它的属性和方法，以便在实际开发中能够更加方便的应用它。</p>
 
-<p>Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.</p>
+<p>首先我们看一下QQ和设置界面，这都是用UITableview实现的。</p>
 
-<p>The quick brown fox jumped over the lazy
-dog&rsquo;s back.</p>
+<p><img src="http://guoxiaomind.github.io/images/postimage/qq.png" width="180" height="260"/>
+<img src="http://guoxiaomind.github.io/images/postimage/setting.png" width="180" height="260" /></p>
 
-<h1>Header 3</h1>
+<ol>
+<li>UITableView介绍</li>
+</ol>
 
-<blockquote><p>This is a blockquote.</p>
-
-<p>This is the second paragraph in the blockquote.</p>
-
-<h2>This is an H2 in a blockquote</h2>
-
-<p>Some of these words <em>are emphasized</em>.
-Some of these words <em>are emphasized also</em>.
-Use two asterisks for <strong>strong emphasis</strong>.
-Or, if you prefer, <strong>use two underscores instead</strong>.</p></blockquote>
-
-<ul>
-<li>Candy.</li>
-<li>Gum.</li>
-<li><p>Booze.</p></li>
-<li><p>A list item.
-With multiple paragraphs.</p></li>
-<li><p>Another item in the list.</p></li>
-</ul>
-
-
-<p>This is an <a href="http://example.com/">example link</a>.</p>
-
-<p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
-<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
 ]]></content>
   </entry>
   
