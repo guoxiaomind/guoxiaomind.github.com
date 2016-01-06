@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-06T23:24:04+08:00</updated>
+  <updated>2016-01-07T00:03:28+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -12,14 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[UITableView]]></title>
-    <link href="http://guoxiaomind.github.io/blog/2016/01/06/uitableview/"/>
-    <updated>2016-01-06T22:01:34+08:00</updated>
-    <id>http://guoxiaomind.github.io/blog/2016/01/06/uitableview</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
 </feed>
