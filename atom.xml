@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-14T13:24:13+08:00</updated>
+  <updated>2016-01-14T13:31:38+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -27,23 +27,28 @@
 
 <h5>1.背景（backgroundColor）,圆角（cornerRadius）,剪切子视图属性（maskToBounds）<br/></h5>
 
-<p>示例代码1：<br/></p>
+<p>示例代码1：<br/>
+<body bgcolor="black"></p>
 
-<p style="color: black"><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
+<p>
+<code>
+parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
     view.layer.backgroundColor = [UIColor redColor].CGColor;//子视图红色背景<br/>
     view.layer.cornerRadius = 100;//半径为100的圆角<br/>
     [parentView addSubview:view];
     UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     subView.layer.backgroundColor = [UIColor blueColor].CGColor;
-    [view addSubview:subView];</code></p>
+    [view addSubview:subView];
+ </code>
+    </p>
 
 
 <p>效果图1：<br/>
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.png" width="240" height="370"/> <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.1.png" width="240" height="370"/><br/><br/>
 示例代码2：<br/></p>
 
-<table border="1">
+<p>
 <code>
     parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
@@ -53,16 +58,17 @@
     UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
     subView.layer.backgroundColor = [UIColor blueColor].CGColor;
     [view addSubview:subView];<br/>
-   </code></table>
+   </p>
 
 
-<p>由于view视图被子视图subview覆盖，所以只显示subview，背景为蓝色<br>
+<p></code>
+由于view视图被子视图subview覆盖，所以只显示subview，背景为蓝色<br>
    效果图2：<br/>
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer2.png" width="240" height="370"/> <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer2.1.png" width="240" height="370"/><br/><br/></p>
 
 <p>示例代码3：<br/></p>
 
-<table border="1">
+<p>
 <code>
     parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
@@ -73,10 +79,11 @@
     UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
     subView.layer.backgroundColor = [UIColor blueColor].CGColor;
     [view addSubview:subView];<br/>
-   </code></table>
+   </p>
 
 
-<p>由于view视图的子视图subview被剪切与view相同大小，所以只显示subview，背景为蓝色<br>
+<p></code>
+由于view视图的子视图subview被剪切与view相同大小，所以只显示subview，背景为蓝色<br>
 效果图3：<br/>
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer3.png" width="240" height="370"/><br/></p>
 
@@ -84,7 +91,7 @@
 
 <p>示例代码4：<br/></p>
 
-<table border="1">
+<p>
 <code>
     self.view.backgroundColor = [UIColor greenColor];<br/>
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
@@ -95,7 +102,7 @@
     view.layer.shadowRadius =10;//阴影半径<br/>
     view.layer.shadowOpacity =1;//阴影透明度<br/>
     [self.view addSubview:view];
-       </code></table>
+       </p>
 
 
 <p>效果图4：<br/>
