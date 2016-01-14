@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-14T11:28:55+08:00</updated>
+  <updated>2016-01-14T11:34:22+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -45,7 +45,7 @@ CALayer类是一个矩形的图层，管理着基于图像的内容和动画的�
 
 
 <p>效果图1：<br/>
-<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer1.png" width="180" height="270"/>- -<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer1.1.png" width="180" height="270"/><br/><br/>
+<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer1.png" width="240" height="370"/> <img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer1.1.png" width="240" height="370"/><br/><br/>
 示例代码2：<br/></p>
 
 <table border="1">
@@ -63,7 +63,7 @@ CALayer类是一个矩形的图层，管理着基于图像的内容和动画的�
 
 <p>由于view视图被子视图subview覆盖，所以只显示subview，背景为蓝色<br>
    效果图2：<br/>
-<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer2.png" width="180" height="270"/>&ndash;<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer2.1.png" width="180" height="270"/><br/><br/></p>
+<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer2.png" width="240" height="370"/> <img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer2.1.png" width="240" height="370"/><br/><br/></p>
 
 <p>示例代码3：<br/></p>
 
@@ -83,7 +83,7 @@ CALayer类是一个矩形的图层，管理着基于图像的内容和动画的�
 
 <p>由于view视图的子视图subview被剪切与view相同大小，所以只显示subview，背景为蓝色<br>
 效果图3：<br/>
-<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer3.png" width="180" height="270"/><br/></p>
+<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer3.png" width="240" height="370"/><br/></p>
 
 <h5>2.阴影（shadow）<br/></h5>
 
@@ -104,7 +104,7 @@ CALayer类是一个矩形的图层，管理着基于图像的内容和动画的�
 
 
 <p>效果图4：<br/>
-<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer4.png" width="180" height="270"/><br/></p>
+<img src="http://guoxiaomind.github.io/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer4.png" width="240" height="370"/><br/></p>
 
 <h5>3.位置（position）,锚点（anchorPoint）,框架（frame）,边界（bounds）<br/></h5>
 
