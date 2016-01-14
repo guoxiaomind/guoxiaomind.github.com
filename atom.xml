@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-01-14T14:04:37+08:00</updated>
+  <updated>2016-01-14T14:06:19+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -40,7 +40,7 @@ subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 
 
 <p>效果图1：<br/>
-<img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.png" width="240" height="350"/> <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.1.png" width="240" height="350"/><br/><br/>
+<img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.png" width="240" height="320"/> <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.1.png" width="240" height="320"/><br/><br/>
 示例代码2：</p>
 
 <pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
