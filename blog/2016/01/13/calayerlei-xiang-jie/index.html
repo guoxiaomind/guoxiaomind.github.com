@@ -98,18 +98,14 @@ CALayer类是一个矩形的图层，管理着基于图像的内容和动画的�
 
 <p>示例代码1：<br/></p>
 
-<table border="1">
-<section><code>
-parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
+<p><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];<br/>
     view.layer.backgroundColor = [UIColor redColor].CGColor;//子视图红色背景<br/>
     view.layer.cornerRadius = 100;//半径为100的圆角<br/>
     [parentView addSubview:view];
     UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     subView.layer.backgroundColor = [UIColor blueColor].CGColor;
-    [view addSubview:subView];
-   </code></section> 
-</table>
+    [view addSubview:subView];</code></p>
 
 
 <p>效果图1：<br/>
