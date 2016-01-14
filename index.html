@@ -99,11 +99,11 @@
 
 <p>示例代码1：</p>
 
-<pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景
+<pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
 UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 view.layer.backgroundColor = [UIColor redColor].CGColor;//子视图红色背景
 view.layer.cornerRadius = 100;//半径为100的圆角
-[parentView addSubview:view];
+[parentView addSubview:view];<br/>
 UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 [view addSubview:subView];</code></pre>
@@ -113,11 +113,11 @@ subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.png" width="240" height="370"/> <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer1.1.png" width="240" height="370"/><br/><br/>
 示例代码2：</p>
 
-<pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景
+<pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
 UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 view.layer.backgroundColor = [UIColor redColor].CGColor;//子视图红色背景
 view.layer.cornerRadius = 100;//半径为100的圆角
-[parentView addSubview:view];
+[parentView addSubview:view];<br/>
 UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 [view addSubview:subView];</pre>
@@ -130,12 +130,12 @@ subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 
 <p>示例代码3：</p>
 
-<pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景
+<pre><code>parentView.layer.backgroundColor = [UIColor greenColor];//父视图绿色背景<br/>
 UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 view.layer.backgroundColor = [UIColor redColor].CGColor;//子视图红色背景
 view.layer.cornerRadius = 100;//半径为100的圆角
 view.layer.masksToBounds= YES;
-[parentView addSubview:view];
+[parentView addSubview:view];<br/>
 UIView *subView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 [view addSubview:subView]; </pre>
@@ -150,10 +150,10 @@ subView.layer.backgroundColor = [UIColor blueColor].CGColor;
 
 <p>示例代码4：</p>
 
-<pre><code>self.view.backgroundColor = [UIColor greenColor];
+<pre><code>self.view.backgroundColor = [UIColor greenColor];<br/>
 UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 view.layer.backgroundColor = [UIColor redColor].CGColor;
-view.layer.cornerRadius = 100;
+view.layer.cornerRadius = 100;<br/>
 view.layer.shadowOffset = CGSizeMake(0, 6);//阴影偏移量
 view.layer.shadowColor = [UIColor blackColor].CGColor;
 view.layer.shadowRadius =10;//阴影半径
