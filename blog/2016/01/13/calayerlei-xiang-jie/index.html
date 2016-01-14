@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>小民哥的技术博客</title>
+  <title>CALayer类基础详解（一） - 小民哥的技术博客</title>
   <meta name="author" content="小民哥">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://guoxiaomind.github.io/">
+  <link rel="canonical" href="http://guoxiaomind.github.io/blog/2016/01/13/calayerlei-xiang-jie/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="技术小黑屋" type="application/atom+xml">
@@ -64,15 +64,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/01/13/calayerlei-xiang-jie/">CALayer类基础详解（一）</a></h1>
+      <h1 class="entry-title">CALayer类基础详解（一）</h1>
     
     
       <p class="meta">
@@ -88,7 +85,7 @@
   </header>
 
 
-  <div class="entry-content"><h4>一、CALayer基本介绍<br/></h4>
+<div class="entry-content"><h4>一、CALayer基本介绍<br/></h4>
 
 <p><br/>
 CALayer类是一个矩形的图层，管理着基于图像的内容和动画的展示，经常被用来存储视图，也被用来作为没有视图的展示，图层主要工作是管理视觉效果，也包括图层自己的视觉属性，如：背景颜色（backgroundColor），边框(border)，阴影(shadow)等，除此之外，图层还保存着它在屏幕上显示的几何内容，如：位置(position)，大小(size)，转换(transform)。动画是通过修改图层的内容和几何的属性实现的，一个图层对象封装了图层的时间和速度，它的动画采用了用来定义时间的CAMediaTiming 协议。<br/>
@@ -193,18 +190,43 @@ d.图层的anchorPoint（锚点）属性是一个CGPoint值，默认值为（0.5
 图7：<br/>
 <img src="/Users/guoxiaomin/Documents/octopress/source/images/postimage/CALayer7.png" width="400" height="400"/><br/></p>
 </div>
-  
-  
 
 
-    </article>
+  <footer>
+    <p class="meta">
+      
   
-  <div class="pagination">
+
+<span class="byline author vcard">Posted by <span class="fn">小民哥</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-01-13T18:07:25+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:07 pm</span></time>
+      
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <html>
@@ -237,6 +259,7 @@ d.图层的anchorPoint（锚点）属性是一个CGPoint值，默认值为（0.5
 
   
 </aside>
+
 
     </div>
   </div>
