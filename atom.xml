@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-03-26T22:53:34+08:00</updated>
+  <updated>2016-03-26T22:55:20+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -128,7 +128,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[CALayer类基础详解（一）]]></title>
+    <title type="html"><![CDATA[CALayer类基础详解（一）---基本属性]]></title>
     <link href="http://guoxiaomind.github.io/blog/2016/01/13/calayerlei-xiang-jie/"/>
     <updated>2016-01-13T18:07:25+08:00</updated>
     <id>http://guoxiaomind.github.io/blog/2016/01/13/calayerlei-xiang-jie</id>
