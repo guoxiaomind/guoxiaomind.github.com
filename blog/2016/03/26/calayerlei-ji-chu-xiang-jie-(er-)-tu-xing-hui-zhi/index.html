@@ -91,10 +91,10 @@ CALayer的图形绘制有两种方法：
 <div class="entry-content"><h3>CALayer图形绘制介绍</h3>
 
 <p>CALayer的图形绘制功能，可以实现某些我们需要的特定图形和效果，CALayer图形绘制利用原生的Core Graphics方法实现的。<br/>
-<strong>CALayer的图形绘制有两种方法：<br/>
+<font color="#000000" size = "2px"><strong>CALayer的图形绘制有两种方法：<br/>
 1.通过图层代理方法drawLayer:inContext进行图形绘制的。<br/>
 2.使用drawInContext:方法，通过创建图层CALayer来进行自定义图层绘制。<br/>
-需要注意的是调用这两种方法以后，必须调用setNeedsDisplay方法，否则无法显示内容。setNeedsDisplay方法的作用是移除旧的图层内容（contents），设置新的图层内容。</strong></p>
+需要注意的是调用这两种方法以后，必须调用setNeedsDisplay方法，否则无法显示内容。setNeedsDisplay方法的作用是移除旧的图层内容（contents），设置新的图层内容。</strong></font></p>
 
 <h4>1.图层代理方法的使用</h4>
 

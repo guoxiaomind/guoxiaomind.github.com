@@ -94,10 +94,10 @@ CALayer的图形绘制有两种方法：
   <div class="entry-content"><h3>CALayer图形绘制介绍</h3>
 
 <p>CALayer的图形绘制功能，可以实现某些我们需要的特定图形和效果，CALayer图形绘制利用原生的Core Graphics方法实现的。<br/>
-<strong>CALayer的图形绘制有两种方法：<br/>
+<font color="#000000" size = "2px"><strong>CALayer的图形绘制有两种方法：<br/>
 1.通过图层代理方法drawLayer:inContext进行图形绘制的。<br/>
 2.使用drawInContext:方法，通过创建图层CALayer来进行自定义图层绘制。<br/>
-需要注意的是调用这两种方法以后，必须调用setNeedsDisplay方法，否则无法显示内容。setNeedsDisplay方法的作用是移除旧的图层内容（contents），设置新的图层内容。</strong></p>
+需要注意的是调用这两种方法以后，必须调用setNeedsDisplay方法，否则无法显示内容。setNeedsDisplay方法的作用是移除旧的图层内容（contents），设置新的图层内容。</strong></font></p>
 
 <h4>1.图层代理方法的使用</h4>
 
@@ -229,7 +229,7 @@ CALayer的图形绘制有两种方法：
 
 <p>CALayer类是一个矩形的图层，管理着基于图像的内容和动画的展示，经常被用来存储视图，也被用来作为没有视图的展示，图层主要工作是管理视觉效果，也包括图层自己的视觉属性，如：背景颜色（backgroundColor），边框(border)，阴影(shadow)等，除此之外，图层还保存着它在屏幕上显示的几何内容，如：位置(position)，大小(size)，转换(transform)。动画是通过修改图层的内容和几何的属性实现的，一个图层对象封装了图层的时间和速度，它的动画采用了用来定义时间的CAMediaTiming 协议。<br/>
 如果一个图层是视图（view)创建的，那么它的代理自动默认为视图，如果是你自己创建的一个图层，你需要给图层分配一个代理对象，给图层动态的的提供内容和执行其它任务，一个图层也许有一个布局管理对象管理子视图的布局。<br/>
-<strong>每个UIView都有一个layer，它是UIView的根图层，它的所有显示的内容都在layer上面，同时layer还可以作为其它layer的父图层。</strong></p>
+<font color="#000000" size = "2px"><strong>每个UIView都有一个layer，它是UIView的根图层，它的所有显示的内容都在layer上面，同时layer还可以作为其它layer的父图层。</strong></font></p>
 
 <h4>二、CALayer的常用属性<br/></h4>
 
@@ -309,8 +309,8 @@ view.layer.shadowOpacity =1;//阴影透明度
 效果图5：<br/>
 a.图层的position它是一个CGPoint值，在它的父图层的坐标空间里，当改变frame时，它的position也改变了，对于一个新的独立的图层它的默认值为（0.0，0.0）。<br/><br/>
 b.图层的bounds属性是一个CGRect的值，指定图层的大小(bounds.size)和图层的原点。<br/><br/>
-c.图层的fream属性是一个CGRect的值，指定图层的大小(fream.size)和图层的位置(fream.origin)，格式为（x，y，width，height），<strong>它的frame属性是通过bounds，anchorPoint，position属性计算的，在改变frame值时，position和bounds的值也会改变。</strong><br/><br/>
-d.图层的anchorPoint（锚点）属性是一个CGPoint值，默认值为（0.5，0.5），在图层的中间位置,<strong>anchorPoint永远和position的位置重合，所以当position的位置固定以后，可以通过改变anchorPoint的值来改变图层位置</strong>。锚点使用单元空间坐标系表示，（0.0，0.0）点接近图层的原点，而（1.0，1.0）是原点的对角点。<strong>锚点还是图层做变换的支点，图层进行几何操作都是围绕锚点的,如：旋转（rotate），伸缩（scale），当锚点变换时，就绕着新的锚点做几何变换.</strong><br/>
+c.图层的fream属性是一个CGRect的值，指定图层的大小(fream.size)和图层的位置(fream.origin)，格式为（x，y，width，height），<font color="#000000" size = "2px"><strong>它的frame属性是通过bounds，anchorPoint，position属性计算的，在改变frame值时，position和bounds的值也会改变。</strong></font><br/><br/>
+d.图层的anchorPoint（锚点）属性是一个CGPoint值，默认值为（0.5，0.5），在图层的中间位置,<font color="#000000" size = "2px"><strong>anchorPoint永远和position的位置重合，所以当position的位置固定以后，可以通过改变anchorPoint的值来改变图层位置</strong></font>。锚点使用单元空间坐标系表示，（0.0，0.0）点接近图层的原点，而（1.0，1.0）是原点的对角点。<font color="#000000" size = "2px"><strong>锚点还是图层做变换的支点，图层进行几何操作都是围绕锚点的,如：旋转（rotate），伸缩（scale），当锚点变换时，就绕着新的锚点做几何变换.</strong></font><br/>
 图5：<br/>
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer5.png" width="400" height="400"/><br/><br/>
 图6是anchorPoint的示意图，IOS中anchorPoint原点为左上角。<br/><br/>
