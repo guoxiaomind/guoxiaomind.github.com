@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-03-26T23:13:43+08:00</updated>
+  <updated>2016-03-26T23:15:41+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -217,7 +217,7 @@ view.layer.shadowOpacity =1;//阴影透明度
 a.图层的position它是一个CGPoint值，在它的父图层的坐标空间里，当改变frame时，它的position也改变了，对于一个新的独立的图层它的默认值为（0.0，0.0）。<br/><br/>
 b.图层的bounds属性是一个CGRect的值，指定图层的大小(bounds.size)和图层的原点。<br/><br/>
 c.图层的fream属性是一个CGRect的值，指定图层的大小(fream.size)和图层的位置(fream.origin)，格式为（x，y，width，height），<font color="#000000" size = "4px"><strong>它的frame属性是通过bounds，anchorPoint，position属性计算的，在改变frame值时，position和bounds的值也会改变。</strong></font><br/><br/>
-d.图层的anchorPoint（锚点）属性是一个CGPoint值，默认值为（0.5，0.5），在图层的中间位置,<font color="#000000" size = "2px"><strong>anchorPoint永远和position的位置重合，所以当position的位置固定以后，可以通过改变anchorPoint的值来改变图层位置</strong></font>。锚点使用单元空间坐标系表示，（0.0，0.0）点接近图层的原点，而（1.0，1.0）是原点的对角点。<font color="#000000" size = "4px"><strong>锚点还是图层做变换的支点，图层进行几何操作都是围绕锚点的,如：旋转（rotate），伸缩（scale），当锚点变换时，就绕着新的锚点做几何变换.</strong></font><br/>
+d.图层的anchorPoint（锚点）属性是一个CGPoint值，默认值为（0.5，0.5），在图层的中间位置,<font color="#000000" size = "4px"><strong>anchorPoint永远和position的位置重合，所以当position的位置固定以后，可以通过改变anchorPoint的值来改变图层位置</strong></font>。锚点使用单元空间坐标系表示，（0.0，0.0）点接近图层的原点，而（1.0，1.0）是原点的对角点。<font color="#000000" size = "4px"><strong>锚点还是图层做变换的支点，图层进行几何操作都是围绕锚点的,如：旋转（rotate），伸缩（scale），当锚点变换时，就绕着新的锚点做几何变换.</strong></font><br/>
 图5：<br/>
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/CALayer5.png" width="400" height="400"/><br/><br/>
 图6是anchorPoint的示意图，IOS中anchorPoint原点为左上角。<br/><br/>
