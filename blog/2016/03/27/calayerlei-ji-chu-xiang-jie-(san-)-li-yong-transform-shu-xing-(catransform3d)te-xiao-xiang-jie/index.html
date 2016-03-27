@@ -87,7 +87,7 @@
 
 <div class="entry-content"><h3>前言</h3>
 
-<p>这一部分主要讲CALayer类中的transform和sublayerTransform属性的使用，利用这两个属性，可以进行图层的旋转，缩放，偏移，歪斜等效果，首先我们先看transform和sublayerTransform属性的定义：@property CATransform3D transform，它是一个CATransform3D结构的属性,CATransform3D结构是一个4*4的矩阵，图层的变换特效都是基于这个矩阵的变换，所以要了解CATransform3D的结构，下面我将会介绍，在看这一部分的时候，你首先要明白位置（position）,锚点（anchorPoint）,框架（frame）,边界（bounds）这几部分的关系，因为CATransform3D的图层变换是以锚点（anchorPoint）的位置来进行，所以必须了解这几者的概念和关系，我写的<a href="http://example.com/" title="Title">
+<p>这一部分主要讲CALayer类中的transform和sublayerTransform属性的使用，利用这两个属性，可以进行图层的旋转，缩放，偏移，歪斜等效果，首先我们先看transform和sublayerTransform属性的定义：@property CATransform3D transform，它是一个CATransform3D结构的属性,CATransform3D结构是一个4*4的矩阵，图层的变换特效都是基于这个矩阵的变换，所以要了解CATransform3D的结构，下面我将会介绍，在看这一部分的时候，你首先要明白位置（position）,锚点（anchorPoint）,框架（frame）,边界（bounds）这几部分的关系，因为CATransform3D的图层变换是以锚点（anchorPoint）的位置来进行，所以必须了解这几者的概念和关系，我写的<a href="http://guoxiaomind.github.io/blog/2016/01/13/calayerlei-xiang-jie/" title="Title">
 CALayer基础详解（一）&mdash;基本属性</a>中有关于四者的讲解。</p>
 
 <h3>CATransform3D介绍</h3>
@@ -304,7 +304,7 @@ CATransform3D CATransform3DRotate ( CATransform3D t, CGFloat angle, CGFloat x, C
 <br/>
 <img src="http://7xq33v.com1.z0.glb.clouddn.com/%E5%8A%A8%E5%9B%BE.gif" width="240" height="370"/> <br/></p>
 
-<p><strong>源码链接：<a href="http://example.com/" title="Title">
+<p><strong>源码链接：<a href="https://github.com/guoxiaomind/CATransform3DDemo" title="Title">
 打开连接下载</a></strong></p>
 
 <h3>总结：</h3>
