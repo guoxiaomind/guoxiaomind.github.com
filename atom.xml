@@ -4,7 +4,7 @@
   <title><![CDATA[小民哥的技术博客]]></title>
   <link href="http://guoxiaomind.github.io/atom.xml" rel="self"/>
   <link href="http://guoxiaomind.github.io/"/>
-  <updated>2016-03-26T23:15:41+08:00</updated>
+  <updated>2016-03-27T22:46:30+08:00</updated>
   <id>http://guoxiaomind.github.io/</id>
   <author>
     <name><![CDATA[小民哥]]></name>
@@ -12,6 +12,250 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CALayer类基础详解（三）---利用transform 属性（CATransform3D）特效详解]]></title>
+    <link href="http://guoxiaomind.github.io/blog/2016/03/27/calayerlei-ji-chu-xiang-jie-(san-)-li-yong-transform-shu-xing-(catransform3d)te-xiao-xiang-jie/"/>
+    <updated>2016-03-27T22:35:09+08:00</updated>
+    <id>http://guoxiaomind.github.io/blog/2016/03/27/calayerlei-ji-chu-xiang-jie-(san-)-li-yong-transform-shu-xing-(catransform3d)te-xiao-xiang-jie</id>
+    <content type="html"><![CDATA[<h3>前言</h3>
+
+<p>这一部分主要讲CALayer类中的transform和sublayerTransform属性的使用，利用这两个属性，可以进行图层的旋转，缩放，偏移，歪斜等效果，首先我们先看transform和sublayerTransform属性的定义：@property CATransform3D transform，它是一个CATransform3D结构的属性,CATransform3D结构是一个4*4的矩阵，图层的变换特效都是基于这个矩阵的变换，所以要了解CATransform3D的结构，下面我将会介绍，在看这一部分的时候，你首先要明白位置（position）,锚点（anchorPoint）,框架（frame）,边界（bounds）这几部分的关系，因为CATransform3D的图层变换是以锚点（anchorPoint）的位置来进行，所以必须了解这几者的概念和关系，我写的<a href="http://example.com/" title="Title">
+CALayer基础详解（一）&mdash;基本属性</a>中有关于四者的讲解。</p>
+
+<h3>CATransform3D介绍</h3>
+
+<p>CATransform3D结构是一个4*4的矩阵，<font color="#000000" size = "4px"><strong>用于图层的旋转，缩放，偏移，歪斜和应用的透视等变换</strong></font>，这是CATransform3D的具体结构：</p>
+
+<pre><code>struct CATransform3D
+{
+  CGFloat m11, m12, m13, m14;
+  CGFloat m21, m22, m23, m24;
+  CGFloat m31, m32, m33, m34;
+  CGFloat m41, m42, m43, m44;
+};
+
+typedef struct CATransform3D CATransform3D;</code></pre>
+
+
+<p>在这个矩阵中，每行每列中的数据都有具体的意义，代表着不同的变换，首先我们先看一下核心动画中用于改变CATransform3D结构中矩阵值的常用的变换函数。</p>
+
+<h4>1.是否进行转换标识</h4>
+
+<pre><code>bool CATransform3DIsIdentity ( CATransform3D t );
+当CATransform3DIsIdentity=YES的时候，说明CATransform3D是个单位矩阵，此时不进行变换，当为NO时，进行变换。CATransform3DIsIdentity也是一个常量，为单位矩阵，值是[1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1]</code></pre>
+
+
+<h4>2.偏移变换函数</h4>
+
+<pre><code>CATransform3D CATransform3DMakeTranslation ( CGFloat tx, CGFloat ty, CGFloat tz );//基于单位矩阵偏移的，函数返回结果为： t' = [1 0 0 0; 0 1 0 0; 0 0 1 0; tx ty tz 1].
+CATransform3D CATransform3DTranslate ( CATransform3D t, CGFloat tx, CGFloat ty, CGFloat tz );//基于t的偏移，函数返回结果为t' = translate(tx, ty, tz) * t</code></pre>
+
+
+<p>举个例子：</p>
+
+<pre><code>CATransform3DMakeTranslation ( 0, 100,0);//在原来图层的基础上，压轴方向上偏移100，函数返回结果为：t' = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 100 0 1].</code></pre>
+
+
+<p>偏移变换函数改变元素如下</p>
+
+<pre><code>struct CATransform3D
+{
+  CGFloat m11, m12, m13, m14;
+  CGFloat m21, m22, m23, m24;
+  CGFloat m31, m32, m33, m34;
+  CGFloat m41（x平移）, m42（y平移）, m43（z平移）, m44;
+};</code></pre>
+
+
+<h4>3.缩放变换函数</h4>
+
+<pre><code>CATransform3D CATransform3DMakeScale (CGFloat sx, CGFloat sy, CGFloat sz );//基于单位矩阵缩放的，函数返回结果为：t' = [sx 0 0 0; 0 sy 0 0; 0 0 sz 0; 0 0 0 1].
+CATransform3D CATransform3DScale ( CATransform3D t, CGFloat sx, CGFloat sy, CGFloat sz );//基于t的缩放，函数返回结果为： t' = scale(sx, sy, sz) * t</code></pre>
+
+
+<p>举个例子：</p>
+
+<pre><code>CATransform3DMakeScale (0.9, 0.9, 1 );//在原来图层的基础上，X和Y值分别为原来的0.9，Z值不变；[0.9 0 0 0; 0 0.9 0 0; 0 0 1 0; 0 0 0 1]</code></pre>
+
+
+<p>缩放函数改变元素如下：</p>
+
+<pre><code>struct CATransform3D
+{
+  CGFloat m11（x缩放）, m12, m13, m14;
+  CGFloat m21, m22（y缩放）, m23, m24;
+  CGFloat m31, m32, m33（z缩放）, m34;
+  CGFloat m41, m42, m43, m44;
+};</code></pre>
+
+
+<h4>4.旋转变换函数</h4>
+
+<pre><code>CATransform3D CATransform3DMakeRotation ( CGFloat angle, CGFloat x, CGFloat y, CGFloat z );//基于单位矩阵旋转的，绕x轴旋转时，函数结果为t' = [1 0 0 0; 0 COS（angle） SIN（angle） 0; 0 -SIN（angle） COS（angle） 0; 0 0 0 1].
+CATransform3D CATransform3DRotate ( CATransform3D t, CGFloat angle, CGFloat x, CGFloat y, CGFloat z );//基于t的旋转，旋转角度为angle（angle是弧度值，不是角度值，弧度值 =角度值*M_PI/180.0f）</code></pre>
+
+
+<p>旋转函数绕x轴旋转时，影响元素如下：</p>
+
+<pre><code>struct CATransform3D
+{
+  CGFloat m11, m12, m13, m14;
+  CGFloat m21, m22（x旋转）, m23（x旋转）, m24;
+  CGFloat m31, m32（x旋转）, m33（x旋转）, m34;
+  CGFloat m41, m42, m43, m44;
+};</code></pre>
+
+
+<h4>5.反转变换函数</h4>
+
+<pre><code>CATransform3D CATransform3DInvert ( CATransform3D t );//如果t有反转矩阵，则返回反转矩阵,如果没有，则返回原来的值。</code></pre>
+
+
+<p>利用上述函数进行的动画制作，源代码如下：</p>
+
+<pre><code>#import "MainViewController.h"
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+#define animateShowTime 0.3f
+
+@interface MainViewController (){
+    UIView *maskView;
+    UIButton * showButton;
+    UIView *currentView;
+    UIView *bottomView;
+}
+
+@end
+
+@implementation MainViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self initUI];
+}
+
+- (void)initUI{
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
+    maskView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [maskView setBackgroundColor:[UIColor blackColor]];
+    [maskView setAlpha:0];
+    UITapGestureRecognizer *hideGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideAnimate)];
+    [maskView addGestureRecognizer:hideGesture];
+    
+    currentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+    currentView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:currentView];
+    
+    showButton = [[UIButton alloc]initWithFrame:CGRectMake((self.view.frame.size.width-100)/2, 250, 100, 60)];
+    showButton.backgroundColor = [UIColor yellowColor];
+    [showButton addTarget:self action:@selector(showAnimate) forControlEvents:UIControlEventTouchUpInside];
+    [currentView addSubview:showButton];
+    
+    bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight, screenWidth, 340)];
+    [bottomView setBackgroundColor:[UIColor greenColor]];
+    [self.view addSubview:bottomView];
+
+}
+
+- (void)showAnimate{
+    [self showViewAnimate:currentView];
+}
+- (void)hideAnimate{
+    [self hideViewAnimate:currentView];
+}
+//显示动画
+- (void)showViewAnimate:(UIView *)view
+{
+    [self.view addSubview:maskView];
+    CGRect frame = [bottomView frame];
+    frame.origin.y = screenHeight - bottomView.frame.size.height;
+    [UIView animateWithDuration:animateShowTime animations:^{
+        //第一步
+        [view.layer setTransform:[self firstStep]];
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:animateShowTime animations:^{
+            //第二步
+            [view.layer setTransform:[self secondStep:view]];
+        } completion:^(BOOL finished){
+            [UIView animateWithDuration:animateShowTime animations:^{
+                [maskView setAlpha:0.5f];
+                [bottomView setFrame:frame];
+            }];
+        }];
+    }];
+    [self.view bringSubviewToFront:bottomView];
+}
+//隐藏动画
+- (void)hideViewAnimate:(UIView *)view
+{
+    CGRect frame = [bottomView frame];
+    frame.origin.y += bottomView.frame.size.height;
+    [UIView animateWithDuration:animateShowTime animations:^{
+        [maskView setAlpha:0.f];
+        [bottomView setFrame:frame];
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:animateShowTime animations:^{
+            [maskView removeFromSuperview];
+           //第一步
+            [view.layer setTransform:[self firstStep]];
+        } completion:^(BOOL finished){
+            [UIView animateWithDuration:animateShowTime animations:^{
+                [view.layer setTransform:CATransform3DIdentity];
+            }];
+        }];
+    }];
+}
+//动画效果的第一步
+-(CATransform3D)firstStep{
+    
+    //让transform1为单位矩阵
+    CATransform3D transform1 = CATransform3DIdentity;
+    //z轴纵深的3D效果和CATransform3DRotate配合使用才能看出效果
+    transform1.m34 = 1.0/-900;
+    //x和y都缩小为原来的0.9，z不变
+    transform1 = CATransform3DScale(transform1, 0.9, 0.9, 1);
+    //绕x轴向内旋转30度
+    transform1 = CATransform3DRotate(transform1,15.0f * M_PI/180.0f, 1, 0, 0);
+    return transform1;
+}
+//动画效果的第二步
+-(CATransform3D)secondStep:(UIView*)view{
+    //让transform2为单位矩阵
+    CATransform3D transform2 = CATransform3DIdentity;
+    //变成transform1旋转前的状态
+    transform2 = CATransform3DScale(transform2, 0.9, 0.9, 1);
+    return transform2;
+}
+
+@end</code></pre>
+
+
+<p>动画效果：
+<br/>
+<img src="http://7xq33v.com1.z0.glb.clouddn.com/%E5%8A%A8%E5%9B%BE.gif" width="240" height="370"/> <br/></p>
+
+<p><strong>源码链接：<a href="http://example.com/" title="Title">
+打开连接下载</a></strong></p>
+
+<h3>总结：</h3>
+
+<pre><code>struct CATransform3D
+{
+  CGFloat m11（x缩放）, m12, m13, m14;
+  CGFloat m21, m22（y缩放）, m23, m24;
+  CGFloat m31, m32, m33（z缩放）, m34（透视效果，要有角度才会显示）;
+  CGFloat m41（x平移）, m42（y平移）, m43（z平移）, m44;
+};
+
+typedef struct CATransform3D CATransform3D;</code></pre>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CALayer类基础详解（二）---图形绘制]]></title>
